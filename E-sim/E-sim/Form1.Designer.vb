@@ -42,7 +42,7 @@ Partial Class Form1
         'WebBrowser1
         '
         Me.WebBrowser1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.WebBrowser1.Location = New System.Drawing.Point(12, 372)
+        Me.WebBrowser1.Location = New System.Drawing.Point(74, 129)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
@@ -54,7 +54,7 @@ Partial Class Form1
         'BtnLoad
         '
         Me.BtnLoad.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLoad.Location = New System.Drawing.Point(380, 369)
+        Me.BtnLoad.Location = New System.Drawing.Point(298, 126)
         Me.BtnLoad.Name = "BtnLoad"
         Me.BtnLoad.Size = New System.Drawing.Size(75, 23)
         Me.BtnLoad.TabIndex = 1
@@ -139,15 +139,15 @@ Partial Class Form1
         '
         'TBQuantity
         '
-        Me.TBQuantity.Location = New System.Drawing.Point(308, 12)
+        Me.TBQuantity.Location = New System.Drawing.Point(279, 12)
         Me.TBQuantity.Name = "TBQuantity"
-        Me.TBQuantity.Size = New System.Drawing.Size(35, 20)
+        Me.TBQuantity.Size = New System.Drawing.Size(46, 20)
         Me.TBQuantity.TabIndex = 11
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(240, 15)
+        Me.Label5.Location = New System.Drawing.Point(208, 15)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 13)
         Me.Label5.TabIndex = 12
@@ -156,7 +156,7 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(240, 43)
+        Me.Label6.Location = New System.Drawing.Point(208, 43)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(42, 13)
         Me.Label6.TabIndex = 13
@@ -164,24 +164,25 @@ Partial Class Form1
         '
         'TBMoney
         '
-        Me.TBMoney.Location = New System.Drawing.Point(308, 40)
+        Me.TBMoney.Location = New System.Drawing.Point(279, 40)
         Me.TBMoney.Name = "TBMoney"
-        Me.TBMoney.Size = New System.Drawing.Size(35, 20)
+        Me.TBMoney.Size = New System.Drawing.Size(46, 20)
         Me.TBMoney.TabIndex = 14
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(349, 43)
+        Me.Label7.Location = New System.Drawing.Point(331, 43)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(0, 13)
+        Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Currency"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(467, 404)
+        Me.ClientSize = New System.Drawing.Size(385, 161)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TBMoney)
         Me.Controls.Add(Me.Label6)
@@ -198,7 +199,7 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnLoad)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "e-sim tool"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

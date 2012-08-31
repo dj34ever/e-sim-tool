@@ -2,6 +2,7 @@
 
 Public Class Form1
     Dim TmpString, S1, Link, SID, CID, IID, QID, Currency As String
+    Dim i As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'CBServer.Items.Add("Primera")
@@ -285,11 +286,8 @@ Public Class Form1
 
     Private Sub Load_site()
         WebBrowser1.Navigate("" & Link & "")
-        TmpString = WebBrowser1.Document.Body.InnerHtml
-        If TmpString <> "" Then
-            Find_Quantity()
-            Find_Money()
-        End If
+
+        
     End Sub
 
     Private Sub Find_Quantity()
@@ -342,4 +340,25 @@ Public Class Form1
 
 
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+        TmpString = ""
+        TmpString = WebBrowser1.Document.Body.InnerHtml
+
+        If TmpString <> "" Then
+            Find_Quantity()
+            Find_Money()
+        End If
+    End Sub
+
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
+        DataGridView1.Rows.Add(IID, QID, TBQuantity.Text, TBMoney.Text)
+    End Sub
+
+    Private Sub SairToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SairToolStripMenuItem.Click
+        Close()
+    End Sub
 End Class

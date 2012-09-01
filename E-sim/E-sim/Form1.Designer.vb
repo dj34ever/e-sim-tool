@@ -44,6 +44,12 @@ Partial Class Form1
         Me.BtnAdd = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.BtnLoad1 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.CBCountry2 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.CBServer2 = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FicheiroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SairToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,17 +57,23 @@ Partial Class Form1
         Me.Quality = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Quantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Gold = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Quantity2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Money = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Gold2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TBMoney1 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.CBCountry3 = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'WebBrowser1
@@ -231,7 +243,7 @@ Partial Class Form1
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Item, Me.Quality, Me.Quantity, Me.Price})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Item, Me.Quality, Me.Quantity, Me.Price, Me.Gold})
         Me.DataGridView1.Location = New System.Drawing.Point(212, 7)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(471, 263)
@@ -280,6 +292,8 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Controls.Add(Me.BtnLoad1)
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
@@ -288,6 +302,69 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'BtnLoad1
+        '
+        Me.BtnLoad1.Location = New System.Drawing.Point(608, 276)
+        Me.BtnLoad1.Name = "BtnLoad1"
+        Me.BtnLoad1.Size = New System.Drawing.Size(75, 23)
+        Me.BtnLoad1.TabIndex = 2
+        Me.BtnLoad1.Text = "Load"
+        Me.BtnLoad1.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.CBCountry3)
+        Me.GroupBox3.Controls.Add(Me.Label10)
+        Me.GroupBox3.Controls.Add(Me.TBMoney1)
+        Me.GroupBox3.Controls.Add(Me.CBCountry2)
+        Me.GroupBox3.Controls.Add(Me.Label9)
+        Me.GroupBox3.Controls.Add(Me.CBServer2)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(200, 206)
+        Me.GroupBox3.TabIndex = 1
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "GroupBox3"
+        '
+        'CBCountry2
+        '
+        Me.CBCountry2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBCountry2.FormattingEnabled = True
+        Me.CBCountry2.Items.AddRange(New Object() {"Argentina", "Australia", "Belgium", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Croatia", "Finland", "France", "Germany", "Greece", "Hungary", "India", "Indonesia", "Iran", "Ireland", "Israel", "Italy", "Latvia", "Lithuania", "Malasya", "Mexico", "Netherlands", "Norway", "Pakistan", "Peru", "Poland", "Portugal", "Republic of Macedonia", "Romania", "Russia", "Serbia", "Slovenia", "South Korea", "Spain", "Sweden", "Switzerland", "Taiwan", "Turkey", "USA", "Ukraine", "United Kingdom"})
+        Me.CBCountry2.Location = New System.Drawing.Point(73, 46)
+        Me.CBCountry2.Name = "CBCountry2"
+        Me.CBCountry2.Size = New System.Drawing.Size(121, 21)
+        Me.CBCountry2.TabIndex = 11
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 49)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(33, 13)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "From:"
+        '
+        'CBServer2
+        '
+        Me.CBServer2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBServer2.FormattingEnabled = True
+        Me.CBServer2.Items.AddRange(New Object() {"Primera", "Secura"})
+        Me.CBServer2.Location = New System.Drawing.Point(73, 19)
+        Me.CBServer2.Name = "CBServer2"
+        Me.CBServer2.Size = New System.Drawing.Size(121, 21)
+        Me.CBServer2.TabIndex = 3
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 22)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(41, 13)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Server:"
         '
         'MenuStrip1
         '
@@ -308,7 +385,7 @@ Partial Class Form1
         'SairToolStripMenuItem
         '
         Me.SairToolStripMenuItem.Name = "SairToolStripMenuItem"
-        Me.SairToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SairToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.SairToolStripMenuItem.Text = "Sair"
         '
         'Item
@@ -340,35 +417,64 @@ Partial Class Form1
         Me.Price.Name = "Price"
         Me.Price.ReadOnly = True
         '
-        'Label8
+        'Gold
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 22)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 13)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Server:"
+        Me.Gold.HeaderText = "Gold"
+        Me.Gold.Name = "Gold"
+        Me.Gold.ReadOnly = True
         '
-        'GroupBox3
+        'DataGridView2
         '
-        Me.GroupBox3.Controls.Add(Me.ComboBox1)
-        Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(200, 206)
-        Me.GroupBox3.TabIndex = 1
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Quantity2, Me.Money, Me.Gold2})
+        Me.DataGridView2.Location = New System.Drawing.Point(212, 6)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(471, 150)
+        Me.DataGridView2.TabIndex = 3
         '
-        'ComboBox1
+        'Quantity2
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Primera", "Secura"})
-        Me.ComboBox1.Location = New System.Drawing.Point(73, 19)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 3
+        Me.Quantity2.HeaderText = "Quantity"
+        Me.Quantity2.Name = "Quantity2"
+        Me.Quantity2.ReadOnly = True
+        '
+        'Money
+        '
+        Me.Money.HeaderText = "Money"
+        Me.Money.Name = "Money"
+        Me.Money.ReadOnly = True
+        '
+        'Gold2
+        '
+        Me.Gold2.HeaderText = "Gold"
+        Me.Gold2.Name = "Gold2"
+        Me.Gold2.ReadOnly = True
+        '
+        'TBMoney1
+        '
+        Me.TBMoney1.Location = New System.Drawing.Point(73, 130)
+        Me.TBMoney1.Name = "TBMoney1"
+        Me.TBMoney1.Size = New System.Drawing.Size(100, 20)
+        Me.TBMoney1.TabIndex = 12
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(6, 76)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(23, 13)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "To:"
+        '
+        'CBCountry3
+        '
+        Me.CBCountry3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBCountry3.FormattingEnabled = True
+        Me.CBCountry3.Items.AddRange(New Object() {"Argentina", "Australia", "Belgium", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Chile", "China", "Colombia", "Croatia", "Finland", "France", "Germany", "Greece", "Hungary", "India", "Indonesia", "Iran", "Ireland", "Israel", "Italy", "Latvia", "Lithuania", "Malasya", "Mexico", "Netherlands", "Norway", "Pakistan", "Peru", "Poland", "Portugal", "Republic of Macedonia", "Romania", "Russia", "Serbia", "Slovenia", "South Korea", "Spain", "Sweden", "Switzerland", "Taiwan", "Turkey", "USA", "Ukraine", "United Kingdom"})
+        Me.CBCountry3.Location = New System.Drawing.Point(73, 73)
+        Me.CBCountry3.Name = "CBCountry3"
+        Me.CBCountry3.Size = New System.Drawing.Size(121, 21)
+        Me.CBCountry3.TabIndex = 14
         '
         'Form1
         '
@@ -388,10 +494,11 @@ Partial Class Form1
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,12 +528,23 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FicheiroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SairToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents CBServer2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents BtnLoad1 As System.Windows.Forms.Button
+    Friend WithEvents CBCountry2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Item As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Quality As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Quantity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Price As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Gold As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Quantity2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Money As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Gold2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TBMoney1 As System.Windows.Forms.TextBox
+    Friend WithEvents CBCountry3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 
 End Class

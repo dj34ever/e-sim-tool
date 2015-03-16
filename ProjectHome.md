@@ -1,0 +1,1 @@
+E-sim tool has the objective of importing and convert automaticaly Currency for gold and vice versa, and import the item values easily, for an easy attendance.
